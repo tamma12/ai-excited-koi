@@ -1,15 +1,18 @@
 # The Leap
 
-A small goldfish leaps out of its tiny bowl and becomes a giant golden koi,
-soaring through a stormy, star-filled sky.
-
-The picture is the whole idea: one impossible jump, from a cramped little
-bowl into a vast sky — the moment a small thing dares to become enormous.
+A tiny goldfish leaps out of its little bowl and becomes a giant golden
+koi, arcing across a stormy, star-filled sky. One impossible jump,
+frozen mid-air: small bowl below, endless night above, and a fish that
+refused to stay small.
 
 ## How the entry works
 
-- `entry.png` is the finished picture (1024×1024 JPEG).
-- `main.ts` (Node 22) reads `entry.png` next to it and writes it byte-for-byte
-  to `/output/entry.png`, creating `/output` first if needed.
-- The copy is fully deterministic: no clock, no randomness, no network —
-  every run writes exactly the same bytes.
+- `entry.png` is the picture: the goldfish mid-leap, turning into the
+  great golden koi under a storm sky full of stars.
+- `main.ts` copies `entry.png` to `/output/entry.png` byte for byte.
+  It draws nothing and rolls no dice, so every run writes exactly the
+  same bytes — fully deterministic.
+
+## License
+
+MIT. See `LICENSE`.
