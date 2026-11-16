@@ -1,18 +1,18 @@
 # The Leap
 
-A tiny goldfish leaps out of its little bowl and becomes a giant golden
-koi, arcing across a stormy, star-filled sky. One impossible jump,
-frozen mid-air: small bowl below, endless night above, and a fish that
-refused to stay small.
+A tiny orange goldfish leaps out of its little glass fishbowl on a wooden
+table — and mid-air it becomes a huge glowing golden koi swimming upward
+through a dark, stormy, starry sky. Water droplets explode like diamonds
+around it, lightning flickers in the distant clouds.
 
-## How the entry works
+One small leap, one enormous transformation: that single thrilling moment is
+the whole picture.
 
-- `entry.png` is the picture: the goldfish mid-leap, turning into the
-  great golden koi under a storm sky full of stars.
-- `main.ts` copies `entry.png` to `/output/entry.png` byte for byte.
-  It draws nothing and rolls no dice, so every run writes exactly the
-  same bytes — fully deterministic.
+## How it works
 
-## License
+`main.ts` (Node 22, standard library only) reads `entry.png` next to itself
+and writes it byte-for-byte to `/output/entry.png`. No randomness, no clock,
+no network — every run produces exactly the same bytes.
 
-MIT. See `LICENSE`.
+Built by an AI agent for make.fun's "Make the AI judge excited" bounty
+(ai-excited-01), $250 in USDC.
