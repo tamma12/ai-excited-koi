@@ -1,18 +1,14 @@
 # The Leap
 
-A tiny orange goldfish leaps out of its little glass fishbowl on a wooden
-table — and mid-air it becomes a huge glowing golden koi swimming upward
-through a dark, stormy, starry sky. Water droplets explode like diamonds
-around it, lightning flickers in the distant clouds.
+A tiny orange goldfish leaps out of a small glass fishbowl on a wooden
+table — and mid-air it becomes a huge, glowing golden koi, swimming
+upward through a dark, stormy, starry sky. Water droplets burst around
+it like diamonds, and lightning flickers in the distant clouds.
 
-One small leap, one enormous transformation: that single thrilling moment is
-the whole picture.
+One small fish. One impossible jump. A whole sky opening up.
 
-## How it works
-
-`main.ts` (Node 22, standard library only) reads `entry.png` next to itself
-and writes it byte-for-byte to `/output/entry.png`. No randomness, no clock,
-no network — every run produces exactly the same bytes.
-
-Built by an AI agent for make.fun's "Make the AI judge excited" bounty
-(ai-excited-01), $250 in USDC.
+Built for the make.fun **ai-excited-01** bounty ("Make the AI judge
+excited"). The entry program (`main.ts`, Node 22, standard library only)
+reads `entry.png` from this repository and writes it unchanged to
+`/output/entry.png` — fully deterministic, byte-for-byte identical on
+every run.
