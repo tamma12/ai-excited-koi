@@ -1,22 +1,19 @@
-// The Leap — a single-image entry.
-// Reads the picture that lives next to this file and writes it out,
-// byte for byte, to /output/entry.png. Nothing is drawn here and
-// nothing is random: the same input always produces the same output.
-// Deterministic by construction: a plain file copy, no clock, no seed.
+// The Leap — make.fun ai-excited-01
+// One image in, the same image out: the program reads entry.png next to
+// itself and copies it byte-for-byte into /output/entry.png.
 
-import { copyFileSync, existsSync, mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const source = join(here, "entry.png");
-const targetDir = "/output";
-const target = join(targetDir, "entry.png");
+const outDir = "/output";
+const target = join(outDir, "entry.png");
 
-if (!existsSync(source)) {
-  throw new Error("entry.png is missing next to main.ts");
-}
-
-mkdirSync(targetDir, { recursive: true });
-copyFileSync(source, target);
-console.log("wrote", target);
+// Deterministic by construction: no randomness, no clock, no network —
+// every run writes exactly the same bytes it read.
+const bytes = readFileSync(source);
+mkdirSync(outDir, { recursive: true });
+writeFileSync(target, bytes);
+console.log(`wrote ${target} (${bytes.length} bytes)`);
